@@ -1,0 +1,215 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root@localhost:3306/mydb"
+}
+
+model Admin {
+  adminid Int @default(autoincrement()) @id
+  name String
+  email String @unique
+  password String
+
+  hashedRT String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  userid Int @default(autoincrement()) @id
+  name String
+  email String @unique
+  password String
+
+  designation String? @default("ACCOUNTANT")
+
+  hashedRT String?
+
+  softDel Boolean?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Customer {
+  customerid Int @default(autoincrement()) @id
+  name String?
+
+  softDel Boolean? @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  uploads uploadtable[]
+}
+
+model Mawb{
+  mawb_id Int @default(autoincrement()) @id
+  mawb String
+
+  flight String
+
+  month Int @default(0)
+  year Int @default(0)
+
+  date String @default("")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  upload uploadtable[]
+}
+
+model uploadtable{
+  upload_id Int @default(autoincrement()) @id
+  awb String?
+  customer Customer @relation(fields: [customerid], references: [customerid])
+  customerid Int 
+  address String?
+  consigne String?
+  bin_vat String?
+  dest String?
+  cnee_address String?
+  ctc String?
+  tel_no Int?
+  nop Int?
+  weight Int?
+  volume Float?
+  dsct String?
+  cod Float?
+  val Float?
+  re String?
+  bag_no String?
+  billgenerate Boolean @default(false)
+
+  mawb Mawb @relation(fields: [mawb_id], references: [mawb_id])
+  mawb_id Int
+
+  pcr pcr[]
+  scr scr[]
+  spxpp spxpp[]
+  pcs pcs[]
+  scs scs[]
+}
+
+model conversion{
+  conversionID Int @default(autoincrement()) @id
+  bdt_value Float
+  month Int
+  year Int
+
+  pcr pcr[]
+  scr scr[]
+  pcs pcs[]
+  scs scs[]
+}
+
+model locationrate{
+  locationRate_id Int @default(autoincrement()) @id
+  location_from String
+  location_to String
+  weight_1 Int
+  rate_1 Float
+  weight_2 Int
+  rate_2 Float
+  weight_3 Int
+  rate_3 Float
+
+  pcr pcr[]
+  scr scr[]
+}
+
+model pcr{
+  pcr_id Int @default(autoincrement()) @id
+  value Float
+
+  upload uploadtable @relation(fields: [upload_id], references: [upload_id], onDelete: Cascade)
+  upload_id Int
+
+  location locationrate @relation(fields: [locationRate_id], references: [locationRate_id])
+  locationRate_id Int
+
+  conversionrate conversion @relation(fields: [conversionID], references: [conversionID])
+  conversionID Int
+}
+
+model parcelrate{
+  parcelrate_id Int @default(autoincrement()) @id
+  weight Int
+  rate1 Float
+  rate2 Float
+
+  location String
+
+  scr scr[]
+  spxpp spxpp[]
+  scs scs[]
+}
+
+model scr{
+  scr_id Int @default(autoincrement()) @id
+  value Float
+
+  upload uploadtable @relation(fields: [upload_id], references: [upload_id], onDelete: Cascade)
+  upload_id Int
+
+  locationExternal locationrate @relation(fields: [locationRate_id], references: [locationRate_id])
+  locationRate_id Int
+
+  locationInternal parcelrate @relation(fields: [parcelrate_id], references: [parcelrate_id])
+  parcelrate_id Int
+
+  conversionrate conversion @relation(fields: [conversionID], references: [conversionID])
+  conversionID Int
+}
+
+model spxpp{
+  spxpp_id Int @default(autoincrement()) @id
+
+  value Float
+
+  upload uploadtable @relation(fields: [upload_id], references: [upload_id], onDelete: Cascade)
+  upload_id Int
+
+  locationInternal parcelrate @relation(fields: [parcelrate_id], references: [parcelrate_id])
+  parcelrate_id Int
+}
+
+model pcs{
+  pcs_id Int @default(autoincrement()) @id
+
+  value Float
+
+  chn_usd Float
+
+  upload uploadtable @relation(fields: [upload_id], references: [upload_id], onDelete: Cascade)
+  upload_id Int
+
+  conversionrate conversion @relation(fields: [conversionID], references: [conversionID])
+  conversionID Int
+}
+
+model scs{
+  scs_id Int @default(autoincrement()) @id
+
+  value Float
+
+  upload uploadtable @relation(fields: [upload_id], references: [upload_id], onDelete: Cascade)
+  upload_id Int
+
+  locationInternal parcelrate @relation(fields: [parcelrate_id], references: [parcelrate_id])
+  parcelrate_id Int
+
+  conversionrate conversion @relation(fields: [conversionID], references: [conversionID])
+  conversionID Int
+}

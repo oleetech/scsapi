@@ -1,0 +1,1274 @@
+{
+	"info": {
+		"_postman_id": "9a5c4940-d826-46f9-9675-ad2f45e3757d",
+		"name": "SCS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30390935",
+		"_collection_link": "https://planetary-trinity-999205.postman.co/workspace/My-Workspace~de9d0e0e-2ec2-486d-8ae9-a2fa357d68b8/collection/30390935-9a5c4940-d826-46f9-9675-ad2f45e3757d?action=share&source=collection_link&creator=30390935"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3MTUxMTQ3MzksImV4cCI6MTcxNTExNTYzOX0.z7D4__g4t81KsoqFou0a1s2pBWcR-R152puMHZbcaFQ"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/admin/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"signin"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "testingAdmin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all admin list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/admin/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "id",
+								"value": "1",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJpYXQiOjE3MTU0MzI5ODUsImV4cCI6MTcxNTQzMzg4NX0.ZrnPVO7naHfhNX-JuDkqZgQ__62ilh_rAFlVDXgaVCA"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/admin/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/admin/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"admin",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"test\",\r\n    \"name\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test2@gmail.com\",\r\n    \"password\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNzE1NDMyMDc0LCJleHAiOjE3MTU0MzI5NzR9.18ykTKFiIIQJb-Mg2IEG8oF55oAF2yEAmP8TCU2c3rk"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdDRAZ21haWwuY29tIiwiaWF0IjoxNzE1NDMyODgyLCJleHAiOjE3MTU1ODQwODJ9.KuJ-e6hzBaQq_Te7wHiV-DYGmPzY7jSsQ4M3SJgJs1c"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/user/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find one: id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "user Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"New Name\",\r\n    \"email\": \"newemail@example.com\",\r\n    \"password\": \"newpassword123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/update-user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"update-user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload",
+			"item": [
+				{
+					"name": "GET Calls",
+					"item": [
+						{
+							"name": "find all by mawb ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/upload/getByMAWB-ID/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"upload",
+										"getByMAWB-ID",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all by MAWB",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mawb\":\"xcvx211\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/upload/getByMAWB",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"upload",
+										"getByMAWB"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all by month and year",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/upload/getAll/5/2024",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"upload",
+										"getAll",
+										"5",
+										"2024"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by date",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/upload/getAll/2024-05-21",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"upload",
+										"getAll",
+										"2024-05-21"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get All by customer name, month and year",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/upload/getAll/CHANGZHOU DONGHENG PRINTING AND DYEING CO LTD/5/2024",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"upload",
+										"getAll",
+										"CHANGZHOU DONGHENG PRINTING AND DYEING CO LTD",
+										"5",
+										"2024"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get All Customer name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/upload/getAllCustomer/ZHEJIANG",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"upload",
+										"getAllCustomer",
+										"ZHEJIANG"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get mawb lst",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/upload/mawb-list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"upload",
+										"mawb-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get MONTH YEAR LIST",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/upload/month-year-list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"upload",
+										"month-year-list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "Customer ALL GET",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/customer/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"customer",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "by ID",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Upload MAWB + Company + Upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdDRAZ21haWwuY29tIiwiaWF0IjoxNzE1NTk1NjI2LCJleHAiOjE3MTU1OTY1MjZ9.4iJVeQgaPB3sJR2GDxIqp0zH9aSeFtQKLtiMnQ5RwRo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mawb\": \"xcvx211\",\r\n    \"flight\": \"ccxzcx212\",\r\n    \"date\": \"2024-05-16\",\r\n    \"month\": \"05\",\r\n    \"fileData\": [\r\n        {\r\n            \"NO\": 1,\r\n            \"AWBNO\": \"86215892873\",\r\n            \"\": \"11\",\r\n            \"SHIPPER\": \"ZHU YUNHUA\",\r\n            \"SHIPPERADDRESS\": \"NO 25 XIN GANG XITANG TOWN JIASHAN COUNTY JIAXING CITY ZHEJIANG PROVINCE CHINA \",\r\n            \"CONSIGNEE\": \"DONGLIAN FASHION BD LTD\",\r\n            \"BINVAT\": \"\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"DONGLIAN TOWER SOUTH BAIPAIL ASHULIA SAVAR 1349 DHAKA BD\",\r\n            \"CTC\": \"JEWEL  RANA\",\r\n            \"TELNO.\": \"8801725977649\",\r\n            \"NOP\": 1,\r\n            \"WT\": 4.8,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"EYELET\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 2,\r\n            \"AWBNO\": \"86216179195\",\r\n            \"\": \"14\",\r\n            \"SHIPPER\": \"SHIJIAZHUANG WEIBAOLAI TEXTILE CO LIMITED\",\r\n            \"SHIPPERADDRESS\": \"5 4 2802 BIJINGYUAN TIYU NORTH STREET SHIJIAZHUANG HEBEI CHINA\",\r\n            \"CONSIGNEE\": \"SUN CHERRY BODY FASHIONS MFTY LTD\",\r\n            \"BINVAT\": \"0015895020103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"WARD 7 HOLDING E 44 CHANDARA KALIAKOIR GAZIPUR 1751 BD \",\r\n            \"CTC\": \"NARAYAN DAS\",\r\n            \"TELNO.\": \"8801772336688\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD7.50\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 3,\r\n            \"AWBNO\": \"86214628625\",\r\n            \"\": 1,\r\n            \"SHIPPER\": \"SPRINGTEX LTD\",\r\n            \"SHIPPERADDRESS\": \"XINTIAN CENTURY BUSINESS CENETR FUMIN ROAD FUTIAN DISTRICT SHENZHEN CITY\",\r\n            \"CONSIGNEE\": \"AG DRESSES LTD  \",\r\n            \"BINVAT\": \"0004151980102\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT 9 BLOCK C TONGI INDUSTRIAL AREA   HIMARDIGHI TONGI    GAZIPUR 1710 BD \",\r\n            \"CTC\": \"KHALID\",\r\n            \"TELNO.\": \"8801713483523\",\r\n            \"NOP\": 1,\r\n            \"WT\": 13,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD35.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 4,\r\n            \"AWBNO\": \"86216179162\",\r\n            \"\": \"11\",\r\n            \"SHIPPER\": \"ZHEJIANG WEIXING IMP EXP CO LTD\",\r\n            \"SHIPPERADDRESS\": \"WEIXING GARDEN INDUSTRIAL PARK  YOUXI  LINHAI CITY  ZHEJIANG PROVINCE\",\r\n            \"CONSIGNEE\": \"DRESS DISMATIC PVT LTD\",\r\n            \"BINVAT\": \"0001859250202\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"1101 D I T ROAD MALIBAGH CHOWDHURY PARA DHAKA 1219\",\r\n            \"CTC\": \"MR JAHID \",\r\n            \"TELNO.\": \"8801718777454\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.8,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"METAL ZIPPER\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD20.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 5,\r\n            \"AWBNO\": \"86216461763\",\r\n            \"\": \"17\",\r\n            \"SHIPPER\": \"CHANGZHOU DONGHENG PRINTING AND DYEING CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 8 JINGYANG ROAD CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"SHARMIN APPARELS LTD\",\r\n            \"BINVAT\": \"0001830350403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"EAST NARASHINGHAPUR ASHULIA DHAKA 1341\",\r\n            \"CTC\": \"MD AL AMIN HOSSAIN\",\r\n            \"TELNO.\": \"8801321157937\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5.4,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.50\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 6,\r\n            \"AWBNO\": \"86216431383\",\r\n            \"\": \"43\",\r\n            \"SHIPPER\": \"BMS IMP AND EXP CO LTD\",\r\n            \"SHIPPERADDRESS\": \"1217 YUTTAN MANSION NO 2 2FUDONG RD HUTANG CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"NIROB ENTER PRISE\",\r\n            \"BINVAT\": \"0042964910503\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"SOHID NAGAR GATE SA COMPLAX 1ST FOLLOR SAGORIKA ROAD POST COD 4219 PAHARTAY CHITTAGONG BANGLADESH\",\r\n            \"CTC\": \"MD DIDARUL ALAM\",\r\n            \"TELNO.\": \"88 01711831349\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.8,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"100 COTTON FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 7,\r\n            \"AWBNO\": \"86216461634\",\r\n            \"\": \"15\",\r\n            \"SHIPPER\": \"CHANGZHOU TAOSHENG TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 30 LINGDAO HUTANG TOWN WUJIN DISTRICT CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"ANANTA JEANSWEAR LTD\",\r\n            \"BINVAT\": \"0002850350102\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"277 2 KABI JASHIM UDDIN ROAD PAGAR TONGI GAZIPUR 1710\",\r\n            \"CTC\": \"MR SUMON\",\r\n            \"TELNO.\": \"8801713124968\",\r\n            \"NOP\": 1,\r\n            \"WT\": 3.8,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC HANGERS\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.40\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 8,\r\n            \"AWBNO\": \"86216432245\",\r\n            \"\": \"44\",\r\n            \"SHIPPER\": \"CHANGZHOU JIESHENG TEXTILE COLTD\",\r\n            \"SHIPPERADDRESS\": \"NO5 XIZHENG ROAD NIUTANG TOWN WUJIN DISTRICTCHANGZHOU CITY CHINA\",\r\n            \"CONSIGNEE\": \"POWERTEX FASHIONS LTD\",\r\n            \"BINVAT\": \"0001994430103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"DR PANJABALI DR ASSADUZZAMAN  INDUSTRIAL PARK 450 KATHORA P O NAT IONAL UNIVERSITY GAZIPUR 1704 DHAKA  BANGLADESH\",\r\n            \"CTC\": \"MR SALIM KHAN\",\r\n            \"TELNO.\": \"1678074726\",\r\n            \"NOP\": 1,\r\n            \"WT\": 6.4,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"77 COTTON 21 POLYESTER 2 SPANDEX DENIM FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD7.50\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 9,\r\n            \"AWBNO\": \"86215427476\",\r\n            \"\": \"12\",\r\n            \"SHIPPER\": \"HUZHOU SHICHANG TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"TAIHU ROAD ZHONG XIN BUILDING ROOM 1503 ZHEJIANG PROVINCE HUZHOU CITY CHINA \",\r\n            \"CONSIGNEE\": \"MAGIC WORKS LTD\",\r\n            \"BINVAT\": \"0018484290103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"JHALPARA 10 HABIRBARI UNION PARISHAD PS BHALUKA  MYMENSINGH  BANGLADESH\",\r\n            \"CTC\": \"POLAS\",\r\n            \"TELNO.\": \"161373089\",\r\n            \"NOP\": 1,\r\n            \"WT\": 18.6,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 10,\r\n            \"AWBNO\": \"86214740150\",\r\n            \"\": \"11\",\r\n            \"SHIPPER\": \"JIANGSU HF TEXTILES CO LTD\",\r\n            \"SHIPPERADDRESS\": \"ROOM 1108 1109 11F GUOTAI XINTIANDI BLDG NO 19 RENMIN RD EAST ZHANGJIAGANG CITY JIANGSU PROVINCE CHINA \",\r\n            \"CONSIGNEE\": \"EPIC GARMENTS MANUFACTURING CO LTD\",\r\n            \"BINVAT\": \"0003205790403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"SFB NO 08 GROUND 1ST 2ND 3RD 4TH FLOOR DEPZ EXTENSION AREA GONOK BARI SAVAR DHAKA 1349BD  \",\r\n            \"CTC\": \"PIUS\",\r\n            \"TELNO.\": \"8808960757\",\r\n            \"NOP\": 1,\r\n            \"WT\": 9.8,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD10.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 11,\r\n            \"AWBNO\": \"86216323115\",\r\n            \"\": \"43\",\r\n            \"SHIPPER\": \"NANTONG ANYI TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NANTONG JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"VIP ITALIAN COLLECTION\",\r\n            \"BINVAT\": \"0042307190101\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE 548 ROAD 13 BARIDHARA DOHS DHAKA 1212\",\r\n            \"CTC\": \"IFTEKHAR\",\r\n            \"TELNO.\": \"01632377278\",\r\n            \"NOP\": 1,\r\n            \"WT\": 1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 12,\r\n            \"AWBNO\": \"86215152052\",\r\n            \"\": \"15\",\r\n            \"SHIPPER\": \"ZHONG YOU  SHANGHAI TEXTILES CO LTD\",\r\n            \"SHIPPERADDRESS\": \"ROOM 401 WOLI CITY BUILDING A NO 31 LANE 2419 HUNAN ROAD PUDONG SHANGHAI\",\r\n            \"CONSIGNEE\": \"YUNSHAN GARMENTS CO LTD\",\r\n            \"BINVAT\": \"\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"CAMELLIA BUILDING 4TH FLOOR HOUSE 9 ROAD 13 SECTOR 04 UTTARA DHAKA 1230\",\r\n            \"CTC\": \"ASHRAFUL ALAM\",\r\n            \"TELNO.\": \"8801640918288\",\r\n            \"NOP\": 1,\r\n            \"WT\": 3.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 13,\r\n            \"AWBNO\": \"86216431733\",\r\n            \"\": \"42\",\r\n            \"SHIPPER\": \"JIANGSU PINYTEX TEXTILE DYEING  AND  FINISHING CO \",\r\n            \"SHIPPERADDRESS\": \"NO 165 SOUTH QINGYANG ROAD CHANGZH OU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"BENETTON BANGLADESH LTD\",\r\n            \"BINVAT\": \"0024143230101\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"THE PEARL TRADE CENTRE  FLOOR 12TH CHA 90 3 PROGOTI SARANI DHAKA 1212 BANGLADESH\",\r\n            \"CTC\": \"KANIZ FATEMA\",\r\n            \"TELNO.\": \"88 01747675025\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.4,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"100 COTTON FABRIC SWATCHES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 14,\r\n            \"AWBNO\": \"86216077511\",\r\n            \"\": \"61\",\r\n            \"SHIPPER\": \"SHAOXING LIANGZ TEXTILES CO LTD\",\r\n            \"SHIPPERADDRESS\": \"FLAT 102 BUILDING 1 TU SHAN GARDEN SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"FLAXEN DRESS MARKER LTD\",\r\n            \"BINVAT\": \"00085655780103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"MEGHDUBI WARD NO 40 GAZIPUR CITY CORPORATION PS GAZIPUR SADAR GAZIPUR 1700 BANGLADESH\",\r\n            \"CTC\": \"MR NAZMUL HASSAN\",\r\n            \"TELNO.\": \"01933796060\",\r\n            \"NOP\": 1,\r\n            \"WT\": 10.3,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD15.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 15,\r\n            \"AWBNO\": \"86214549433\",\r\n            \"\": \"13\",\r\n            \"SHIPPER\": \"FIFI\",\r\n            \"SHIPPERADDRESS\": \"ROOM 502 BUILDING 3 LANE 3599 QIXIN ROAD MINHANG DISTRICT SHANGHAI CHINA \",\r\n            \"CONSIGNEE\": \"MD IMRAN SIDDIQUI \",\r\n            \"BINVAT\": \"\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE 4 ROAD 1 B SECTOR 9 DHAKA 1230 BD \",\r\n            \"CTC\": \"MD IMRAN SIDDIQUI \",\r\n            \"TELNO.\": \"01714326245\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 16,\r\n            \"AWBNO\": \"86216018210\",\r\n            \"\": \"42\",\r\n            \"SHIPPER\": \"FALEX TEXTILES CHANGZHOU CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 12 QINGFANG ROAD MAHANG INDUSTRIAL AREA HUTANG TOWN    WUJIN DISTRICT CHANGZHOU CITY JIANGSU PROVINCE CHINA\",\r\n            \"CONSIGNEE\": \"SOUTHERN DESIGNERS LTD\",\r\n            \"BINVAT\": \"0002879430403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"ZIRBO ASHULIA SAVAR  DHAKA 1341 BANGLADESH\",\r\n            \"CTC\": \"MR MASUD\",\r\n            \"TELNO.\": \"880 1812812262\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.7,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"100 COTTON SPANDEX SOLID DYED SAMPLE FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 17,\r\n            \"AWBNO\": \"86216146240\",\r\n            \"\": \"44\",\r\n            \"SHIPPER\": \"JIANGSU GTIG EASTAR CO LTD\",\r\n            \"SHIPPERADDRESS\": \"28FL GUOTAI NEW CENTURY PLAZA MIDDLE RENMIN ROAD ZHANG JIA GANG \",\r\n            \"CONSIGNEE\": \"ADAMS ENTERPRISE LTD\",\r\n            \"BINVAT\": \"0046167280102\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"25 DARAIL TONGI PS GAZIPUR 1710 BANGLADESH\",\r\n            \"CTC\": \"MANUN\",\r\n            \"TELNO.\": \"01903450044\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"YARN\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 18,\r\n            \"AWBNO\": \"86215164744\",\r\n            \"\": \"43\",\r\n            \"SHIPPER\": \"TEX\",\r\n            \"SHIPPERADDRESS\": \"ZHEJIANG SHAOXING KEQIAO\",\r\n            \"CONSIGNEE\": \"MASTRADE INTERNATIONAL GARMENTS LTD\",\r\n            \"BINVAT\": \"0001156530103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HELAL COMPLEX PLOT 72 BYPASS BISWA ROAD MOGARKHAL GAZIPUR 1701 BANGLADESH\",\r\n            \"CTC\": \"RASHED KARIM RUBEL\",\r\n            \"TELNO.\": \"88029261062\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD3.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 19,\r\n            \"AWBNO\": \"86216077441\",\r\n            \"\": \"61\",\r\n            \"SHIPPER\": \"SHAOXING LIANGZ TEXTILES CO LTD\",\r\n            \"SHIPPERADDRESS\": \"FLAT 102 BUILDING 1 TU SHAN GARDEN SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"TRIM DEVELOP SOURCE\",\r\n            \"BINVAT\": \"0058168440101\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE 15 ROAD 12 SECTOR 03 UTTARA DHAKA 1230  BANGLADESH\",\r\n            \"CTC\": \"MD RUBAL\",\r\n            \"TELNO.\": \"01312300277\",\r\n            \"NOP\": 1,\r\n            \"WT\": 1.9,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 20,\r\n            \"AWBNO\": \"86215982963\",\r\n            \"\": \"15\",\r\n            \"SHIPPER\": \"GTTL SHANGHAI OFFICE\",\r\n            \"SHIPPERADDRESS\": \"ROOM 1601  NO 2  LANE 1318 CHANGNING ROAD SHANGHAI\",\r\n            \"CONSIGNEE\": \"CRONY TEX SOURCING LTD\",\r\n            \"BINVAT\": \"0046927880101\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE 42 LAKE DRIVE ROAD NIKUNJA 01 KHILKHET PS DHAKA 1229 BD\",\r\n            \"CTC\": \"HELAL RANA\",\r\n            \"TELNO.\": \"8801705376756\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.20\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 21,\r\n            \"AWBNO\": \"86213656292\",\r\n            \"\": \"52\",\r\n            \"SHIPPER\": \"NANTONG WANG AND SHENG TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 39 XITING INDUSTRIAL ZONE TONGZHOU DISTRICT NANTONG JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"EXCOM FASHIONS LTD\",\r\n            \"BINVAT\": \"0005410740403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"NIMERTEK RAJFULBARIA SAVAR DHAKA 1347 BANGLADESH\",\r\n            \"CTC\": \"MR RAHAT\",\r\n            \"TELNO.\": \"8801567875668\",\r\n            \"NOP\": 1,\r\n            \"WT\": 25.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD10.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 22,\r\n            \"AWBNO\": \"86213656944\",\r\n            \"\": \"42\",\r\n            \"SHIPPER\": \"NANTONG TEMPO IMP AND EXPORT CO LTD\",\r\n            \"SHIPPERADDRESS\": \"THE 3RD FLOOR BUILDING NO 3 YOULIAN TECHNOLOGY ZONE YONGHE ROAD NANTONG JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"BRIGHT TEX SOLUTIONS\",\r\n            \"BINVAT\": \"0051748410101\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"177 2 CHANDRIMA LANE AHMAD NAGAR PAIKPARA MIRPUR 01 DHAKA 1216 BANGLADESH\",\r\n            \"CTC\": \"MR MAMUN\",\r\n            \"TELNO.\": \"8801710535217\",\r\n            \"NOP\": 1,\r\n            \"WT\": 6.8,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD4.40\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 23,\r\n            \"AWBNO\": \"86216145982\",\r\n            \"\": \"44\",\r\n            \"SHIPPER\": \"JIANGSU GTIG EASTAR CO LTD\",\r\n            \"SHIPPERADDRESS\": \"27 29 FL GUOTAI BLDG RENMIN ROAD ZHANGJIAGANG JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"BHUYAN WARMTEX PVT LIMITED\",\r\n            \"BINVAT\": \"0023814150103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"KADDA NANDUN P O KADDA BAZAR GAZIPUR GAZIPUR SADAR PS GAZIPUR 1740 BANGLADESH\",\r\n            \"CTC\": \"MAMUN  ZAHID\",\r\n            \"TELNO.\": \"8801700730399\",\r\n            \"NOP\": 1,\r\n            \"WT\": 4,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"SAMPLE YARN AND  SWATCH\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 24,\r\n            \"AWBNO\": \"86215879271\",\r\n            \"\": \"61\",\r\n            \"SHIPPER\": \"SHAOXING PENGYU TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"SHANGFANG BRIDGE QIXIAN INDUSTRIAL ZONE KEQIAO SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"PIONEER CASUAL WEAR LIMITED\",\r\n            \"BINVAT\": \"0002560960403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"ZAMGORA EARPUR UNION ASHULIA DHAKA 1344  BANGLADESH\",\r\n            \"CTC\": \"RITESH BARUA\",\r\n            \"TELNO.\": \"8801973106105\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD6.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 25,\r\n            \"AWBNO\": \"86216483905\",\r\n            \"\": \"15\",\r\n            \"SHIPPER\": \"CHANGZHOU BAOXIN LI TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 26 LINDAO ROAD WUJIN JIANGSU CHANGZHOU CHINA\",\r\n            \"CONSIGNEE\": \"DRESSMEN FASHION WEAR LTD\",\r\n            \"BINVAT\": \"0004487710103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"105 109 NATIONAL CERAMIC INDUSTRIES LTD TONGI INDUSTRIAL AREA TONGI GAZIPUR\",\r\n            \"CTC\": \"MR MUBINUL ISLAM ABIR\",\r\n            \"TELNO.\": \"8801744727959\",\r\n            \"NOP\": 1,\r\n            \"WT\": 4,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD10.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 26,\r\n            \"AWBNO\": \"86216431626\",\r\n            \"\": \"42\",\r\n            \"SHIPPER\": \"CHANGZHOU PHOENIX IMPORT AND EXPOR TCO  LTD\",\r\n            \"SHIPPERADDRESS\": \"1216 YUTIAN MANSION  NO  2 FUDONG ROAD  HUTANG CHANGZHOU JIANGSU CH INA\",\r\n            \"CONSIGNEE\": \"BAIDU FABRICS\",\r\n            \"BINVAT\": \"0049893270102\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"32 MOSZID ROAD GUALTEK FOYDABAD DAKSHIN KHAN PS DHAKA 1230 BANGLADESH\",\r\n            \"CTC\": \"PIJUSH SAHA\",\r\n            \"TELNO.\": \"8801787765500  01628526653\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"100  POLYESTER TAFFETA  /100  POLYESTER SHERPA  /FLEECE/  CORAL FLEECE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD4.50\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 27,\r\n            \"AWBNO\": \"86216453665\",\r\n            \"\": \"73\",\r\n            \"SHIPPER\": \"CHINA JIANGSU INTERNATIONAL CORP\",\r\n            \"SHIPPERADDRESS\": \"20F SUJIAN MANSION NO 31 1 YUNAN ROAD NANJING 210008 JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"M S TEXTILE FAIR\",\r\n            \"BINVAT\": \"6419548505\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"ANANDI MASHABDI NARSINGDI HEAD OFFICE HOUSE 13 3RD FLR ROAD 01 SECTOR 11 UTTAKA DHAKA 1230 BD\",\r\n            \"CTC\": \"MD.ENAMOL HOQUE RIPON\",\r\n            \"TELNO.\": \"1713303212\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 28,\r\n            \"AWBNO\": \"86216146343\",\r\n            \"\": \"44\",\r\n            \"SHIPPER\": \"JIANGSU GTIG EASTAR CO LTD\",\r\n            \"SHIPPERADDRESS\": \"27 28FL GUOTAI BLDG RENMIN ROAD ZHANGJIAGANG JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"SMUG SWEATER LIMITED\",\r\n            \"BINVAT\": \"0022530010103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"TALEPARA CHANDONA GAZIPUR 1702 BANGLADESH\",\r\n            \"CTC\": \"SHAHADAT\",\r\n            \"TELNO.\": \"8801910043993\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5.4,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"YARN\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 29,\r\n            \"AWBNO\": \"86216461590\",\r\n            \"\": \"18\",\r\n            \"SHIPPER\": \"CHANGZHOU DONGHENG PRINTING AND DYEING CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 8 JINGYANG ROAD CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"PULS TRADING FAR EAST LIMITED\",\r\n            \"BINVAT\": \"0003334810101\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE NW K 8 A RD 50 GULSHAN 2 DHAKA 1212 HADI TOWER 11TH FLOOR\",\r\n            \"CTC\": \"IFTIKHAR AHMED CHOWDHURY\",\r\n            \"TELNO.\": \"8801730329086\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5.4,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD10.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 30,\r\n            \"AWBNO\": \"86216145993\",\r\n            \"\": \"34\",\r\n            \"SHIPPER\": \"JIANGSU GTIG EASTAR CO LTD\",\r\n            \"SHIPPERADDRESS\": \"27 29 FL GUOTAI CENTURY PLAZA MIDDEL RENMIN ROAD ZHANGJIAGANG JIANGSU\",\r\n            \"CONSIGNEE\": \"SOUTHEAST SWEATERS LTD\",\r\n            \"BINVAT\": \"0001083870102\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"278 A MEHER NAGAR DOBADIA UTTARKHAN DHAKA 1230\",\r\n            \"CTC\": \"FUAD\",\r\n            \"TELNO.\": \"8801713930597\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"YARN\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 31,\r\n            \"AWBNO\": \"86216432271\",\r\n            \"\": \"43\",\r\n            \"SHIPPER\": \"ZHONGSHAN XINHENG TEXTILE LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 31 LIANYUAN ROAD WEST  SHIQI DISTRICT ZHONGSHAN CITY 528400  GUANGDONG PROVINCE CHINA\",\r\n            \"CONSIGNEE\": \"FASHION FORUM LTD\",\r\n            \"BINVAT\": \"0005194520403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"53 54  JAMGORA  ASHULIA  SAVER  \\r\\nDHAKA 1349 BANGLADESH\",\r\n            \"CTC\": \"MD ABDULLAH AL MAMUN\",\r\n            \"TELNO.\": \"880 1730941860\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5.6,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"100 COTTON FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.60\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 32,\r\n            \"AWBNO\": \"86216462312\",\r\n            \"\": \"16\",\r\n            \"SHIPPER\": \"CHANGZHOU DONGHENG PRINTING AND DYEING CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 8 JINGYANG ROAD CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"BABYLON GARMENTS LTD\",\r\n            \"BINVAT\": \"0001814780403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"2 B 1 DARUSSALAM ROAD MIRPUR DHAKA 1216\",\r\n            \"CTC\": \"RIPON\",\r\n            \"TELNO.\": \"8801688442394\",\r\n            \"NOP\": 1,\r\n            \"WT\": 7.6,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD12.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 33,\r\n            \"AWBNO\": \"86216146063\",\r\n            \"\": \"34\",\r\n            \"SHIPPER\": \"JIANGSU GTIG EASTAR CO LTD\",\r\n            \"SHIPPERADDRESS\": \"27 29 FL GUOTAI CENTURY PLAZA MIDDEL RENMIN ROAD ZHANGJIAGANG JIANGSU\",\r\n            \"CONSIGNEE\": \"SPRING TRADE LTD\",\r\n            \"BINVAT\": \"0003495170403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT 42 KONAPARA TENGURI ZIRANI BAZAR BKSP SAVAR DHAKA\",\r\n            \"CTC\": \"ARIFUL  ISLAM\",\r\n            \"TELNO.\": \"8801924422932\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"YARN\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 34,\r\n            \"AWBNO\": \"86215981585\",\r\n            \"\": \"13\",\r\n            \"SHIPPER\": \"SHANGHAI JIANXIN TRADING DEVELOPMENT CO LTD\",\r\n            \"SHIPPERADDRESS\": \"RM 205 206 NO 257 DALIAN W ROAD SHANGHAI 200081 CHINA \",\r\n            \"CONSIGNEE\": \"BANGA GARMENTS LTD\",\r\n            \"BINVAT\": \"0002762370401\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"29 MILK VITA ROAD SECTION 7 PALLABI DHAKA 1216 BD  \",\r\n            \"CTC\": \"MR SHOHID ULLAH SHOBUJ\",\r\n            \"TELNO.\": \"8801619207558\",\r\n            \"NOP\": 2,\r\n            \"WT\": 12.8,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD3.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 35,\r\n            \"AWBNO\": \"86216499014\",\r\n            \"\": \"71\",\r\n            \"SHIPPER\": \"ZHEJIANG ZHONGDA NOVOTEX CO LTD\",\r\n            \"SHIPPERADDRESS\": \"5TH FLOOR TOWER A XINQIAO CHUANGZHI CENTER 8TH JIUHE ROAD JIANGGAN DISTRICT HANGZHOU CHINA 310009\",\r\n            \"CONSIGNEE\": \"VIZKRFT GLOBA LTD\",\r\n            \"BINVAT\": \"0028945610101\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT 34 ROAD 46 SHEBA HOUSE GULSHAN 2 GULSHAN PS DHAKA 1212 BD\",\r\n            \"CTC\": \"MR ANSARUL\",\r\n            \"TELNO.\": \"8801721567675\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD0.50\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 36,\r\n            \"AWBNO\": \"86216017882\",\r\n            \"\": \"42\",\r\n            \"SHIPPER\": \"CHANGZHOU HAOCHI TEXTILES CO LTD\",\r\n            \"SHIPPERADDRESS\": \"BAIJIA GROUP  DONGHUA VILLAGE HUTANG TOWN WUJIN DISTRICT CHANGZHOU CITY JIANGSU PROVINCE CHINA\",\r\n            \"CONSIGNEE\": \"AL HAJ AKTER GARMENTS LTD\",\r\n            \"BINVAT\": \"0015840240304\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PURINDA POSHCHIMPARA SHATGRAM ARAIHAZAR NARAYANGONJ  BANGLADESH\",\r\n            \"CTC\": \"MR  SHAHIN   \",\r\n            \"TELNO.\": \"88 01324 762987\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.7,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"99 COTTON 1 SPANDEX FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.50\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 37,\r\n            \"AWBNO\": \"86216498944\",\r\n            \"\": \"62.63.64\",\r\n            \"SHIPPER\": \"ZHEJIANG WEIKANG INTERNATIONAL TRADING CO LTD \",\r\n            \"SHIPPERADDRESS\": \"NO 165 ZHONG HE ZHONG ROAD HANGZHOU ZHEJIANG CHINA \",\r\n            \"CONSIGNEE\": \"MELLOW FASHIONS LTD\",\r\n            \"BINVAT\": \"0004099940503\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"JAN SUPER MARKET FLOOR 5 524 DT ROAD KADAMTALI  CHATTOGRAM BD\",\r\n            \"CTC\": \"MR RAHIM\",\r\n            \"TELNO.\": \"01937506249\",\r\n            \"NOP\": 3,\r\n            \"WT\": 64.5,\r\n            \"VOL\": 52.33,\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 38,\r\n            \"AWBNO\": \"86216462393\",\r\n            \"\": \"15\",\r\n            \"SHIPPER\": \"CHANGZHOU SHOWSHA TEXTILES CO LTD\",\r\n            \"SHIPPERADDRESS\": \"5TH FLOOR BUSINESS CINTER NO 101 RENMING EAST ROAD HUTANG TN WUJIN DISTRICT JIANGSU CHANGZHOU CHINA\",\r\n            \"CONSIGNEE\": \"APPARELS VILLAGE LTD\",\r\n            \"BINVAT\": \"0006790860403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"KHAGAN BIRULIA SAVAR DHAKA 1340\",\r\n            \"CTC\": \"EMON\",\r\n            \"TELNO.\": \"88029101349 9101351 9136388\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.9,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 39,\r\n            \"AWBNO\": \"86216434091\",\r\n            \"\": \"43\",\r\n            \"SHIPPER\": \"ZHONGSHAN XINHENG TEXTILE LTD\",\r\n            \"SHIPPERADDRESS\": \"RM 308 316 NO 31 LIANYUAN ROAD WEST  SHIQI DISTRICT ZHONGSHAN CITY 528400  GUANGDONG PROVINCE CHINA\",\r\n            \"CONSIGNEE\": \"GOLDEN STITCH DESIGN LTD\",\r\n            \"BINVAT\": \"0016358880403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"RAJAGHAT  RAJFULBARIA SAVAR  DHAKA   1340  BANGLADESH\",\r\n            \"CTC\": \"MR SAZZAD\",\r\n            \"TELNO.\": \"8801 799527464\",\r\n            \"NOP\": 1,\r\n            \"WT\": 7.7,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"89 COTTON 10 POLYESTER 1 SPANDEX FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 40,\r\n            \"AWBNO\": \"86216431674\",\r\n            \"\": \"34\",\r\n            \"SHIPPER\": \"ZHONGSHAN XINHENG TEXTILE LTD\",\r\n            \"SHIPPERADDRESS\": \"RM 308 316 NO 31 LIANYUAN ROAD WEST  SHIQI DISTRICT ZHONGSHAN CITY 528400  GUANGDONG PROVINCE CHINA\",\r\n            \"CONSIGNEE\": \"MAHMUD FASHION LTD\",\r\n            \"BINVAT\": \"0002803960403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"BARAIPARA  ASHULIA SAVAR  SAVAR PS DHAKA 1341  BANGLADESH\",\r\n            \"CTC\": \"RAIHAN KOBIR\",\r\n            \"TELNO.\": \"1896264403\",\r\n            \"NOP\": 1,\r\n            \"WT\": 9.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"100 COTTON FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.50\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 41,\r\n            \"AWBNO\": \"86215049351\",\r\n            \"\": \"36\",\r\n            \"SHIPPER\": \"JIANGYIN CHANGXU YARN DYED FABRIC CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 3 1 NANHUASHANZUI HUASHAN VILLAGE YUNTING TOWN JIANGYIN JIANGSU CHINA \",\r\n            \"CONSIGNEE\": \"STYLEXA BANGLADESH\",\r\n            \"BINVAT\": \"0056557610101\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE 466 1ST FLOOR ROAD NO 31 NEW DOHS MOHAKHALI GULSHAN PS DHAKA 1206 BD\",\r\n            \"CTC\": \"MR MAHBUB\",\r\n            \"TELNO.\": \"8801618321550\",\r\n            \"NOP\": 1,\r\n            \"WT\": 14.3,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD8.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 42,\r\n            \"AWBNO\": \"86215891624\",\r\n            \"\": \"4\",\r\n            \"SHIPPER\": \"HUNAN DONGYI INDUSTRIAL AND TRADING  CO LTD\",\r\n            \"SHIPPERADDRESS\": \"ROOM 1009   HUAWEN INTERNATIONAL BUILDING  NO 999  ZHONGSHAN WEST ROAD200051CHINA \",\r\n            \"CONSIGNEE\": \"VANCOT LTD\",\r\n            \"BINVAT\": \"0005078450503\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT 18 20 SECTOR 03 KARNAPHULI EPZ NORTH PATENGA CHITTAGONG 4204 BD\",\r\n            \"CTC\": \"LINCOLN CHOWDHURY\",\r\n            \"TELNO.\": \"8801777781815\",\r\n            \"NOP\": 1,\r\n            \"WT\": 38,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD3.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 43,\r\n            \"AWBNO\": \"86215891650\",\r\n            \"\": \"6\",\r\n            \"SHIPPER\": \"HUNAN DONGYI INDUSTRIAL AND TRADING  CO LTD\",\r\n            \"SHIPPERADDRESS\": \"ROOM 1009   HUAWEN INTERNATIONAL BUILDING  NO 999  ZHONGSHAN WEST ROAD200051CHINA \",\r\n            \"CONSIGNEE\": \"VANCOT LTD\",\r\n            \"BINVAT\": \"0005078450503\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT 18 20 SECTOR 03 KARNAPHULI EPZ NORTH PATENGA CHITTAGONG 4204 BD\",\r\n            \"CTC\": \"LINCOLN CHOWDHURY\",\r\n            \"TELNO.\": \"8801777781815\",\r\n            \"NOP\": 1,\r\n            \"WT\": 62,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 44,\r\n            \"AWBNO\": \"86216079320\",\r\n            \"\": \"73\",\r\n            \"SHIPPER\": \"WALLYTEXCO T A XYTEX LTD\",\r\n            \"SHIPPERADDRESS\": \"SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"R H ATTIRE LIMITED\",\r\n            \"BINVAT\": \"0002225770504\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"96 SHAHNUR CENTER 4TH FLOOR MURADPUR PANCHLAISH CHITTAGONG BANGLADESH\",\r\n            \"CTC\": \"SHAMIM\",\r\n            \"TELNO.\": \"008801713015817\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 45,\r\n            \"AWBNO\": \"86216111133\",\r\n            \"\": \"61\",\r\n            \"SHIPPER\": \"SHAOXING DACHUAN TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"4TH FLOOR OF 5 BUILDING 65 SHUANGYAN ROAD PAOJIANG INDUSTRIAL ZONE SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"FARZANA FASHION WORLD LTD\",\r\n            \"BINVAT\": \"0012157140505\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"KHAJA TOWER 2692 NO ASKARABAD  D T ROAD DOUDLEMOORIGN CHITTAGONG BANGLADESH\",\r\n            \"CTC\": \"MR SAYEEDUR RAHMAN\",\r\n            \"TELNO.\": \"01617754540\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.9,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD3.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 46,\r\n            \"AWBNO\": \"86216076936\",\r\n            \"\": \"57\",\r\n            \"SHIPPER\": \"DE PEI LIMITED\",\r\n            \"SHIPPERADDRESS\": \"3F 2A BUILDING YONG SHENG INDUSTRIAL ZONE NO 88 SHUGUANG RD ANCHENG SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"APPAREL PLUS LIMITED\",\r\n            \"BINVAT\": \"0008969950103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOLDING NO INDUSTRY 18 DILAN COMPLEX DHAKA ROAD CHANDONA CHOWRASTA GAZIPUR 1702 BANGLADESH\",\r\n            \"CTC\": \"JISHAN\",\r\n            \"TELNO.\": \"8801819460325\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5.3,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD10.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 47,\r\n            \"AWBNO\": \"86216462334\",\r\n            \"\": \"15\",\r\n            \"SHIPPER\": \"CHANGZHOU DAHUA IMP AND EXP GROUP CORP LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 180 GUANHE WEST ROAD CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"JAMUNA FASHION WEARS LTD\",\r\n            \"BINVAT\": \"\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT 75 ROAD 05 SECTION 02 BLOCK K RUPNAGAR INDUSTRIAL AREA MIRPUR DHAKA 1216\",\r\n            \"CTC\": \"MR ISLAM\",\r\n            \"TELNO.\": \"001709619077\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 48,\r\n            \"AWBNO\": \"86216431630\",\r\n            \"\": \"42\",\r\n            \"SHIPPER\": \"ZHONGSHAN XINHENG TEXTILE LTD\",\r\n            \"SHIPPERADDRESS\": \"RM 308 316 NO 31 LIANYUAN ROAD WEST  SHIQI DISTRICT ZHONGSHAN CITY 528400  GUANGDONG PROVINCE CHINA\",\r\n            \"CONSIGNEE\": \"FASHION FORUM LTD   IDS\",\r\n            \"BINVAT\": \"0005194520403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"53  54 JAMGORA ASHULIA SAVAR DHAKA 1349   BANGLADESH\",\r\n            \"CTC\": \"MD MEHADI HASAN\",\r\n            \"TELNO.\": \"880 1717434788\",\r\n            \"NOP\": 1,\r\n            \"WT\": 6.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"98 COTTON 2 SPANDEX   FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.50\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 49,\r\n            \"AWBNO\": \"86215048485\",\r\n            \"\": \"30\",\r\n            \"SHIPPER\": \"JIANGSU ZHONG CHUANG TEXTILE I AND E   CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 1017 CHENGYANG ROAD JIANGYIN CITY JIANGSU PROVINCE  CHINA 214423 P R CHINA\",\r\n            \"CONSIGNEE\": \"RR FASHIONS \",\r\n            \"BINVAT\": \"0022039660401\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"37 MUKTO BANGLA SHOPPING COMPLEX 4TH FLOOR MIRPUR 1 DHAKA 1216 MAILING ADDRESS HOUSE 3 1ST FLOOR ROAD 06 SECTOR NO 01 UTTARA DHAKA 1230 BD \",\r\n            \"CTC\": \"MR GAPHUR\",\r\n            \"TELNO.\": \"8801752654696\",\r\n            \"NOP\": 1,\r\n            \"WT\": 7.1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 50,\r\n            \"AWBNO\": \"86215403621\",\r\n            \"\": \"43\",\r\n            \"SHIPPER\": \"XYH TEX CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 51 LIUJIA ALLEY XINBEI DISTRICT CHANGZHOU CITY JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"IC ONIC INTERNATIONAL\",\r\n            \"BINVAT\": \"0042711250102\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE 09 ROAD 06 SECTOR 03 UTTARA DHAKA 1230 BANGLADESH\",\r\n            \"CTC\": \"MAHFUZ\",\r\n            \"TELNO.\": \"8801717264997\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 51,\r\n            \"AWBNO\": \"86213427123\",\r\n            \"\": \"29\",\r\n            \"SHIPPER\": \"CHANGZHOU LANGUIREN TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 118 CHANGHONG ROAD JIANGSU CHANGZHOU CHINA\",\r\n            \"CONSIGNEE\": \"A AND A TROUSERS LTD\",\r\n            \"BINVAT\": \"0048576480401\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HARIBARI TAK PUBAIL GATE GAZIPUR 1721\",\r\n            \"CTC\": \"ABID\",\r\n            \"TELNO.\": \"8801738269099\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5.6,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.10\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 52,\r\n            \"AWBNO\": \"86216110411\",\r\n            \"\": \"57\",\r\n            \"SHIPPER\": \"SHAOXING PENGYU TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"SHANGFANG BRIDGE QIXIAN INDUSTRIAL ZONE KEQIAO SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"SOUTHERN SERVICES LTD\",\r\n            \"BINVAT\": \"0005101880403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"ZIRABO ASHULIA SAVAR DHAKA 1341 BANGLADESH\",\r\n            \"CTC\": \"MD SHOPON\",\r\n            \"TELNO.\": \"01313401975\",\r\n            \"NOP\": 1,\r\n            \"WT\": 6.7,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD7.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 53,\r\n            \"AWBNO\": \"86215891635\",\r\n            \"\": \"5\",\r\n            \"SHIPPER\": \"HUNAN DONGYI INDUSTRIAL AND TRADING  CO LTD\",\r\n            \"SHIPPERADDRESS\": \"ROOM 1009   HUAWEN INTERNATIONAL BUILDING  NO 999  ZHONGSHAN WEST ROAD200051CHINA \",\r\n            \"CONSIGNEE\": \"VANCOT LTD\",\r\n            \"BINVAT\": \"0005078450503\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT 18 20 SECTOR 03 KARNAPHULI EPZ NORTH PATENGA CHITTAGONG 4204 BD\",\r\n            \"CTC\": \"LINCOLN CHOWDHURY\",\r\n            \"TELNO.\": \"8801777781815\",\r\n            \"NOP\": 1,\r\n            \"WT\": 17.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD3.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 54,\r\n            \"AWBNO\": \"86216495396\",\r\n            \"\": \"61\",\r\n            \"SHIPPER\": \"ZHEJIANG KINGTEX TRADING CO LTD\",\r\n            \"SHIPPERADDRESS\": \"4TH NO 165 ZHONG HE ZHONG ROAD HANGZHOU CHINA\",\r\n            \"CONSIGNEE\": \"STYLESMYTH SAN APPARELS LTD\",\r\n            \"BINVAT\": \"0004018650906\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"AMTOIL POST  HAT AMTOIL PS SREEPUR DIST MAGURA  7600  BD\",\r\n            \"CTC\": \"KARAN BABAN NIVA\",\r\n            \"TELNO.\": \"880255033742 880255033741\",\r\n            \"NOP\": 1,\r\n            \"WT\": 7,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD3.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 55,\r\n            \"AWBNO\": \"86216431696\",\r\n            \"\": \"41.48\",\r\n            \"SHIPPER\": \"CHANGZHOU WINKING IMPORT  AND  EXPORT CORP LTD\",\r\n            \"SHIPPERADDRESS\": \"BLD 41  HUNDSUN SCIENCE AND TECHNOLOGY PARK  NO 8 BEITANGHE RD  TIANNING DISTRICT  CHANGZHOU  CHINA\",\r\n            \"CONSIGNEE\": \"GLOBAL FASHION GARMENTS LTD \",\r\n            \"BINVAT\": \"0004516420403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"89 BERULIA ROAD TATI SAVAR DHAKA 1340 BANGLADESH\",\r\n            \"CTC\": \"ZAHIR\",\r\n            \"TELNO.\": \"880 1896007022\",\r\n            \"NOP\": 2,\r\n            \"WT\": 29,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"98 COTTON 2 SPANDEX TWILL FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD9.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 56,\r\n            \"AWBNO\": \"86216018280\",\r\n            \"\": \"36\",\r\n            \"SHIPPER\": \"FALEX TEXTILES CHANGZHOU CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 12 QINGFANG ROAD MAHANG INDUSTRIAL AREA HUTANG TOWN    WUJIN DISTRICT CHANGZHOU CITY JIANGSU PROVINCE CHINA\",\r\n            \"CONSIGNEE\": \"HAPA FASHION PVT LTD\",\r\n            \"BINVAT\": \"0000432980101\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE 321  4TH AND 5TH FLOOR ROAD 05  BARIDHARA DOHS DHAKA BANGLDESH\",\r\n            \"CTC\": \"RUBAYAT/IMRAN\",\r\n            \"TELNO.\": \"88028413488 89 01643481352\",\r\n            \"NOP\": 1,\r\n            \"WT\": 16,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"100 COTTON FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 57,\r\n            \"AWBNO\": \"86216481680\",\r\n            \"\": \"15\",\r\n            \"SHIPPER\": \"CHANGZHOU SHENGHONGJING TEXTILE\",\r\n            \"SHIPPERADDRESS\": \"FLOOR 2 BUILDING CHENGDONG INDUSTRIAL PARK HUTANG TOWN WUJIN DISTRICT CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"TORQUE FASHIONS LTD\",\r\n            \"BINVAT\": \"0004006850403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PARAGRAM ASHULIA BAZAR ASHULIA DHAKA 1341\",\r\n            \"CTC\": \"ASHIF SOURAV\",\r\n            \"TELNO.\": \"01777743101\",\r\n            \"NOP\": 1,\r\n            \"WT\": 1.9,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 58,\r\n            \"AWBNO\": \"86216431560\",\r\n            \"\": \"57\",\r\n            \"SHIPPER\": \"TAIXING HUIFENG IMPORT AND EXPORT CO  LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 5 SHENGLI EAST ROAD  HUANGQIAO INDUSTRIAL PAPK HUANGQIAO TOWN  TAIXING  JIANGSU  CHINA\",\r\n            \"CONSIGNEE\": \"WAVE FABRICS INTERNATIONAL\",\r\n            \"BINVAT\": \"0039259450102\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE  19 LIFT 5 ROAD1 SECTOR09 UTTARA DHAKA1230 BANGLADESH\",\r\n            \"CTC\": \"NIZAM  \",\r\n            \"TELNO.\": \"01925602082 \\r\\n01521376515\",\r\n            \"NOP\": 1,\r\n            \"WT\": 11.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"100 COTTON DENIM FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD10.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 59,\r\n            \"AWBNO\": \"86215408860\",\r\n            \"\": \"42\",\r\n            \"SHIPPER\": \"XYH TEX CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 51 LIUJIA ALLEY XINBEI DISTRICT CHANGZHOU CITY JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"PLUS TRADING FAR EAST LTD\",\r\n            \"BINVAT\": \"0003334810101\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE NO NW K 1 ROAD NO 50 GULSHAN 2 DHAKA 1212 BANGLADESH\",\r\n            \"CTC\": \"BUHAYAT CHAKRABARTY\",\r\n            \"TELNO.\": \"09609000466\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"DOC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 60,\r\n            \"AWBNO\": \"86215891613\",\r\n            \"\": \"14\",\r\n            \"SHIPPER\": \"HUNAN DONGYI INDUSTRIAL AND TRADING  CO LTD\",\r\n            \"SHIPPERADDRESS\": \"ROOM 1009   HUAWEN INTERNATIONAL BUILDING  NO 999  ZHONGSHAN WEST ROAD200051CHINA \",\r\n            \"CONSIGNEE\": \"DENITEX LTD\",\r\n            \"BINVAT\": \"0001501320403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"9  1 KARNAPARA SAVER DHAKA 1340 BD \",\r\n            \"CTC\": \"SALIM\",\r\n            \"TELNO.\": \"01716218826\",\r\n            \"NOP\": 1,\r\n            \"WT\": 14.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD20.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 61,\r\n            \"AWBNO\": \"86216076973\",\r\n            \"\": \"71\",\r\n            \"SHIPPER\": \"DE PEI LIMITED\",\r\n            \"SHIPPERADDRESS\": \"3F 2A BUILDING YONG SHENG INDUSTRIAL ZONE NO 88 SHUGUANG RD ANCHENG SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"SEHA APPARELS INTERNATIONAL LTD\",\r\n            \"BINVAT\": \"0007769930103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"79 BLOCK C BANANI CHARMAN BARI DHAKA 1213 BANGLADESH  BANGLADESH\",\r\n            \"CTC\": \"ZIAUL AMIN BHAIYAN RASE\",\r\n            \"TELNO.\": \"01715131722 01842637353\",\r\n            \"NOP\": 1,\r\n            \"WT\": 1.1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 62,\r\n            \"AWBNO\": \"86215787560\",\r\n            \"\": \"71\",\r\n            \"SHIPPER\": \"SHAOXING REIY IMP AND EXP CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 1407 1 BUILDING 1 BLOCK B TEXTILE BUILDING KEQIAO SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"NOOR FABRICS\",\r\n            \"BINVAT\": \"\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"114 116 ISLAMPUR ROAD JAHANGIR TOWER 6TH FLOOR DHAKA 1100 BANGLADESH\",\r\n            \"CTC\": \"MAMUN\",\r\n            \"TELNO.\": \"01911348751\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 63,\r\n            \"AWBNO\": \"86216431604\",\r\n            \"\": \"34\",\r\n            \"SHIPPER\": \"ZHONGSHAN XINHENG TEXTILE LTD\",\r\n            \"SHIPPERADDRESS\": \"RM 308 316 NO 31 LIANYUAN ROAD WEST  SHIQI DISTRICT ZHONGSHAN CITY 528400  GUANGDONG PROVINCE CHINA\",\r\n            \"CONSIGNEE\": \"SELF INNOVATIVE FASHION LTD\",\r\n            \"BINVAT\": \"0021600560103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT 103 DEGERCHALA ROAD P O NATIONAL UNIVERSITY GAZIPUR SADAR GAZIPUR 1704 BANGLADESH\",\r\n            \"CTC\": \"MR SHAFIQUL HAQ\",\r\n            \"TELNO.\": \"880 1916940432\",\r\n            \"NOP\": 1,\r\n            \"WT\": 8.6,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"63 COTTON 35 POLYESTER 2 SPANDEX FABRIC SAMPLE / 98 COTTON 2 SPANDEX FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 64,\r\n            \"AWBNO\": \"86216460945\",\r\n            \"\": \"29\",\r\n            \"SHIPPER\": \"CHANGZHOU SHENGHONGJING TEXTILE\",\r\n            \"SHIPPERADDRESS\": \"FLOOR 2 BUILDING CHENGDONG INDUSTRIAL PARK HUTANG TOWN WUJIN DISTRICT CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"AKS FABRICS AND CO\",\r\n            \"BINVAT\": \"0024319390208\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE NO 466 ROAD NO 06 AVENUE 6 MIRPUR DOHS DHAKA 1216\",\r\n            \"CTC\": \"GOUTAM\",\r\n            \"TELNO.\": \"8414401 3 01841 244155\",\r\n            \"NOP\": 1,\r\n            \"WT\": 16.3,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 65,\r\n            \"AWBNO\": \"86216431652\",\r\n            \"\": \"37.38.39\",\r\n            \"SHIPPER\": \"BMS IMP AND EXP CO LTD\",\r\n            \"SHIPPERADDRESS\": \"1217 YUTTAN MANSION NO 2 2FUDONG RD HUTANG CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"BESTA APPARELS\",\r\n            \"BINVAT\": \"0004233170103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"666 1 GACHA  NATIONAL UNIVERSITY  GAZIPUR BANGLADESH\",\r\n            \"CTC\": \"MR SHADIZZAMAN PRINCE\",\r\n            \"TELNO.\": \"88 01711126526\",\r\n            \"NOP\": 3,\r\n            \"WT\": 39.5,\r\n            \"VOL\": 44.53,\r\n            \"DSCT\": \"100  POLYESTER SHERPA  FLEECE  CORAL FLEECE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD20.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 66,\r\n            \"AWBNO\": \"86216450795\",\r\n            \"\": \"73\",\r\n            \"SHIPPER\": \"SUNTEX INDUSTRY CO LTD NANJING OFFICE\",\r\n            \"SHIPPERADDRESS\": \"ROOM 1504 1507 PHOENIX HERUI PLAZA NO 389 SOUTH TAIPING ROAD QINHUAI DIST NANJING CHINA\",\r\n            \"CONSIGNEE\": \"AFRAH FASHION LTD\",\r\n            \"BINVAT\": \"000170054\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT A 16 BLOCK A BSCIC I A SAGORIKA FOAD FAUZDARHAT CHITTAGONG BANGLADESH\",\r\n            \"CTC\": \"BIKASH  SHAON\",\r\n            \"TELNO.\": \"880 3143151032\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"DOCUMENT\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 67,\r\n            \"AWBNO\": \"86215687622\",\r\n            \"\": \"65.66.67.68\",\r\n            \"SHIPPER\": \"ZHONG YOU SHANGHAI TEXTILE COMPANY LTD\",\r\n            \"SHIPPERADDRESS\": \"ROOM 2504 CHANGLONG BUILDING 1500 DIYANG ROAD KEQIAO DISRTICT SHAOXING CITY  ZHEJIANG PROVINCE  CHINA\",\r\n            \"CONSIGNEE\": \"LESQVIRE LIMITED\",\r\n            \"BINVAT\": \"0021583740103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"JAMIRDIA VALIKA MYMENSINGH BANGLADESH\",\r\n            \"CTC\": \"MR ZELANI\",\r\n            \"TELNO.\": \"01838782912\",\r\n            \"NOP\": 4,\r\n            \"WT\": 93.8,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD834.30\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 68,\r\n            \"AWBNO\": \"86215980001\",\r\n            \"\": \"13\",\r\n            \"SHIPPER\": \"ELAND INTERNATIONAL FASHION SHANGHAI CO LTD\",\r\n            \"SHIPPERADDRESS\": \"3RD FLOOR BUILDING 1 NO 2570 HECHUAN ROAD MINHANG DISTRICT SHANGHAI CHINA \",\r\n            \"CONSIGNEE\": \"COLOUR FASHION INDUSTRIES LTD\",\r\n            \"BINVAT\": \"0008403820103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"MADHKHOLA BAIRAGIRCHALA SREEPUR GAZIPUR 1740 BD \",\r\n            \"CTC\": \"MR PRINCE\",\r\n            \"TELNO.\": \"01611906645\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"PRICE TAG WITH RFID/STRING WITH PLASTIC SEAL /STICKER\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD0.11\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 69,\r\n            \"AWBNO\": \"86215725794\",\r\n            \"\": \"13\",\r\n            \"SHIPPER\": \"WINDTEX INTERNATIONAL LTD\",\r\n            \"SHIPPERADDRESS\": \"ROOM 2303 BUILDING 1 NO 369 XIANXIA ROAD CHANGNING DISTRICT SHANGHAI CHINA\",\r\n            \"CONSIGNEE\": \"BROTHERS FASHION LTD\",\r\n            \"BINVAT\": \"0004646680103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"REDWAN TOWER B 1  WARD 15  VOGRA GAZIPUR 1704 BD   \",\r\n            \"CTC\": \"MR ABIR MOB\",\r\n            \"TELNO.\": \"880258956520\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5.4,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 70,\r\n            \"AWBNO\": \"86216470981\",\r\n            \"\": \"13\",\r\n            \"SHIPPER\": \"LUTHAI TEXTILE CO LTD \",\r\n            \"SHIPPERADDRESS\": \"NO 97 EAST SONGLING ROAD ZICHUAN   \",\r\n            \"CONSIGNEE\": \"AG DRESSES LTD  \",\r\n            \"BINVAT\": \"0004151980102\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT 9 BLOCK C TONGI INDUSTRIAL AREA   HIMARDIGHI TONGI    GAZIPUR 1710 BD \",\r\n            \"CTC\": \"SM KHALIDUR \",\r\n            \"TELNO.\": \"8801713483523\",\r\n            \"NOP\": 1,\r\n            \"WT\": 1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 71,\r\n            \"AWBNO\": \"86215687740\",\r\n            \"\": \"71\",\r\n            \"SHIPPER\": \"ZHONG YOU SHANGHAI TEXTILES COMPANY\",\r\n            \"SHIPPERADDRESS\": \"ROOM 2504 CHANGLONG BUILDING 1500 DIYANG ROAD KEQIAO DISRTICT SHAOXING CITY  ZHEJIANG PROVINCE  CHINA\",\r\n            \"CONSIGNEE\": \"DEWAN FASHION WEARS LTD\",\r\n            \"BINVAT\": \"0008288980103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"MAMUN NAGAR BARA BHABANIPUR KASHIMPUR GAZIPUR BANGLADESH\",\r\n            \"CTC\": \"MR JAMIL\",\r\n            \"TELNO.\": \"8801632260633\",\r\n            \"NOP\": 1,\r\n            \"WT\": 3.43,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 72,\r\n            \"AWBNO\": \"86216076693\",\r\n            \"\": \"71\",\r\n            \"SHIPPER\": \"DE PEI LIMITED\",\r\n            \"SHIPPERADDRESS\": \"3F 2A BUILDING YONG SHENG INDUSTRIAL ZONE NO 88 SHUGUANG RD ANCHENG SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"GLOBAL APPAREL LTD\",\r\n            \"BINVAT\": \"0007929420101\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE 141 4TH FLOOR ROAD 12 BLOCK E BANANI DHAKA 1213 BANGLADESH\",\r\n            \"CTC\": \"BELLE\",\r\n            \"TELNO.\": \"8801726013419\",\r\n            \"NOP\": 1,\r\n            \"WT\": 1.9,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 73,\r\n            \"AWBNO\": \"86216112566\",\r\n            \"\": \"71\",\r\n            \"SHIPPER\": \"SHAOXING JIAREN TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"FLOOR NO 8 HUAXING BUILDING PAOJIANG SHAOXING ZHEJIANG PROVINCE CHINA\",\r\n            \"CONSIGNEE\": \"SSM TEX\",\r\n            \"BINVAT\": \"0047557810102\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"LIFT 5 HOUSE 22 ROAD 4 SECTOR 10 UTTARA DHAKA 1230 BANGLADESH\",\r\n            \"CTC\": \"MAHADI\",\r\n            \"TELNO.\": \"8801640050345  8801781205781\",\r\n            \"NOP\": 1,\r\n            \"WT\": 6.69,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD7.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 74,\r\n            \"AWBNO\": \"86216431700\",\r\n            \"\": \"44\",\r\n            \"SHIPPER\": \"JIANGSU PINYTEX TEXTILE DYEING  AND  FINISHING CO \",\r\n            \"SHIPPERADDRESS\": \"NO 165 SOUTH QINGYANG ROAD CHANGZH OU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"SECTION SEVEN LIMITED\",\r\n            \"BINVAT\": \"0001628150503\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT NO 21 26 PART SECTOR NO3 ROAD NO 4 CEPZ  CHATTOGRAM 4223 BANGLADESH\",\r\n            \"CTC\": \"ZAFRUL\",\r\n            \"TELNO.\": \"8801761493986\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.3,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"BOOKS OF Y D FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD2.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 75,\r\n            \"AWBNO\": \"86216461752\",\r\n            \"\": \"28\",\r\n            \"SHIPPER\": \"CHANGZHOU GUANGLI TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 16 1 THE NORTH ROAD OF LIHUA TIAN NING DISTRICT JIANGSU CHANGZHOU CHINA\",\r\n            \"CONSIGNEE\": \"BENGAL GLORY LIMITED\",\r\n            \"BINVAT\": \"0009510560402\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT NO 01 ROAD NO 07 SUCHANA MODEL TWON BOSILA MOHAMMADPUR PS DHAKA 1207\",\r\n            \"CTC\": \"MR FARID\",\r\n            \"TELNO.\": \"8801764731599\",\r\n            \"NOP\": 1,\r\n            \"WT\": 26.6,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD0.50\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 76,\r\n            \"AWBNO\": \"86215057880\",\r\n            \"\": \"73\",\r\n            \"SHIPPER\": \"JHSHIP INTERNATIONAL LTD\",\r\n            \"SHIPPERADDRESS\": \"4TH FLOOR NO 77 HEYI RD HAISHU DISTRICT NINGBO CHINA\",\r\n            \"CONSIGNEE\": \"CREATIVE ENGINEERS LTD\",\r\n            \"BINVAT\": \"0005885440202\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE  220 A 220D \\r\\nBEGUM ROKEYA SHORONI WEST KAFRUL  DHAKA 1207\\r\\n BANGLADESH\\r\\n\",\r\n            \"CTC\": \"MR NAHID\",\r\n            \"TELNO.\": \"8801687327141\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"DOC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 77,\r\n            \"AWBNO\": \"86215048872\",\r\n            \"\": \"40\",\r\n            \"SHIPPER\": \"JIANGSU ZHONG CHUANG TEXTILE I AND E CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 1017 CHENGYANG ROAD JIANGYIN CITY JIANGSU PROVINCE  214423 P R CHINA\",\r\n            \"CONSIGNEE\": \"BIG BOSS CORPORATION LTD \",\r\n            \"BINVAT\": \"0002358850103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"30 SARABO KASHIMPUR GAZIPUR 1700 BD \",\r\n            \"CTC\": \"MIZAN\",\r\n            \"TELNO.\": \"8801714599128\",\r\n            \"NOP\": 1,\r\n            \"WT\": 7.9,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 78,\r\n            \"AWBNO\": \"86216110260\",\r\n            \"\": \"69\",\r\n            \"SHIPPER\": \"TNG TEXTILE\",\r\n            \"SHIPPERADDRESS\": \"NO 24 YUEDONG ROAD PAOJIANG SHAOXING\",\r\n            \"CONSIGNEE\": \"KAC FASHION WEAR LIMITED\",\r\n            \"BINVAT\": \"0002006920103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"12 13 TETUI BARI SARABO GAZIPUR 1346 BANGLADESH\",\r\n            \"CTC\": \"NASIM MAHMUD SETU\",\r\n            \"TELNO.\": \"8801710644541\",\r\n            \"NOP\": 1,\r\n            \"WT\": 10.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD15.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 79,\r\n            \"AWBNO\": \"86216461671\",\r\n            \"\": \"20\",\r\n            \"SHIPPER\": \"CHANGZHOU HENGWANGJIA TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"ROOM NO 1308 NO 301 TONGJIANG AVENUE XINBEI DISTRICT JIANGSU CHANGZHOU CHINA\",\r\n            \"CONSIGNEE\": \"EURO DENIM AND FASHION LTD\",\r\n            \"BINVAT\": \"0020915860103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"DEGER CHALA SOIDANA HARIKEN NATIONAL UNIVERSITY GAZIPUR\",\r\n            \"CTC\": \"MR SOHAG\",\r\n            \"TELNO.\": \"8801753506860\",\r\n            \"NOP\": 1,\r\n            \"WT\": 23.6,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD6.50\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 80,\r\n            \"AWBNO\": \"86216470944\",\r\n            \"\": \"13\",\r\n            \"SHIPPER\": \"LUTHAI TEXTILE CO LTD \",\r\n            \"SHIPPERADDRESS\": \"NO 97 EAST SONGLING ROAD ZICHUAN   \",\r\n            \"CONSIGNEE\": \"AG DRESSES LTD  \",\r\n            \"BINVAT\": \"0004151980102\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PLOT 9 BLOCK C TONGI INDUSTRIAL AREA   HIMARDIGHI TONGI    GAZIPUR 1710 BD \",\r\n            \"CTC\": \"MR AUGUSTIN \",\r\n            \"TELNO.\": \"88001713483532\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.8,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 81,\r\n            \"AWBNO\": \"86216470045\",\r\n            \"\": \"14\",\r\n            \"SHIPPER\": \"LUTHAI TEXTILE CO LTD \",\r\n            \"SHIPPERADDRESS\": \"NO 97 EAST SONGLING ROAD ZICHUAN   \",\r\n            \"CONSIGNEE\": \"BEST SHIRTS LTD \",\r\n            \"BINVAT\": \"0017997750103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"35  KUNIA BOROBARI  PO NATIONAL UNIVERSITY GAZIPUR1704 BD \",\r\n            \"CTC\": \"SHUVRO\",\r\n            \"TELNO.\": \"8801730785253\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.8,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 82,\r\n            \"AWBNO\": \"86215423512\",\r\n            \"\": \"11\",\r\n            \"SHIPPER\": \"HUZHOU  JINGHUI  I E CO LTD\",\r\n            \"SHIPPERADDRESS\": \"ROOM 411 6B NO  999 WUXING AVENUE HUZHOU ZHEJIANG CHINA \",\r\n            \"CONSIGNEE\": \"FNF TREND FASHION LTD\",\r\n            \"BINVAT\": \"0019969950403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE 2282 1 NOBI ULLAH MIR MENSION HAZI LIAKAT MIR ROAD JAMGORA ASHULIA DHAKA \",\r\n            \"CTC\": \"MR SAZZAD\",\r\n            \"TELNO.\": \"880258950278\",\r\n            \"NOP\": 1,\r\n            \"WT\": 8,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD15.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 83,\r\n            \"AWBNO\": \"86215342861\",\r\n            \"\": \"10\",\r\n            \"SHIPPER\": \"HAINING DESIYUAN TEXTILE CO LTD \",\r\n            \"SHIPPERADDRESS\": \"ROOM 408A HENGLI BUILDING NO 18 JINGDU 4TH ROAD MAQIAO STREET HAINING JIAXING CITY  ZHEJIANG PROVINCE  CHINA \",\r\n            \"CONSIGNEE\": \"RADIAL INTERNATIONAL UNIT 2 LTD\",\r\n            \"BINVAT\": \"0014539580103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOLDING NO 168 1 ZIRANI BAZAR KASHIMPUR GAZIPUR BD \",\r\n            \"CTC\": \"MUSA\",\r\n            \"TELNO.\": \"01688601681\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD15.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 84,\r\n            \"AWBNO\": \"86216111170\",\r\n            \"\": \"71\",\r\n            \"SHIPPER\": \"SHAOXING TIANDU TEXTILES CO LTD\",\r\n            \"SHIPPERADDRESS\": \"RM2201 YULAN INTERNATIONAL BUILDING QUNXIAN ROAD KEQIAO SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"MOUCHAK KNIT COMPOSITE LTD\",\r\n            \"BINVAT\": \"\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"MOUCHAK KALIAKOIR GAZIPUR DHAKA BANGLADESH\",\r\n            \"CTC\": \"MR TUTUL\",\r\n            \"TELNO.\": \"01957970662\",\r\n            \"NOP\": 1,\r\n            \"WT\": 2.3,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD3.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 85,\r\n            \"AWBNO\": \"86215787630\",\r\n            \"\": \"73\",\r\n            \"SHIPPER\": \"SHAOXING CHONYI TEXTILE\",\r\n            \"SHIPPERADDRESS\": \"KEQIAO SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"MTM INTERNATIONAL\",\r\n            \"BINVAT\": \"0000647880402\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE 10 ROAD 09 SECTOR 04 UTTARA 1230 DHAKA BANGLADESH\",\r\n            \"CTC\": \"MR IMRAN\",\r\n            \"TELNO.\": \"8801712692286\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.5,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 86,\r\n            \"AWBNO\": \"86216483942\",\r\n            \"\": \"19\",\r\n            \"SHIPPER\": \"CHANGZHOU BAOXIN LI TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 26 LINDAO ROAD WUJIN JIANGSU CHANGZHOU CHINA\",\r\n            \"CONSIGNEE\": \"AKS FABRICS CO\",\r\n            \"BINVAT\": \"0024319390208\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOUSE 466 2ND 3RD AND 4TH FLOOR ROAD 6 AVENUE 6 MIRPUR DOHS DHAKA 1216\",\r\n            \"CTC\": \"MR ACHINTYA\",\r\n            \"TELNO.\": \"8801841244157\",\r\n            \"NOP\": 1,\r\n            \"WT\": 21.3,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD10.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 87,\r\n            \"AWBNO\": \"86216461446\",\r\n            \"\": \"31.32.33\",\r\n            \"SHIPPER\": \"CHANGZHOU DONGHENG PRINTING AND DYEING CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 8 JINGYANG ROAD CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"ORBITEX KNITWEAR LTD DEBONAIR GROUP\",\r\n            \"BINVAT\": \"0002969350403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"GORAT ASHULIA SAVAR DHAKA 1341\",\r\n            \"CTC\": \"SAYED\",\r\n            \"TELNO.\": \"8801409992029\",\r\n            \"NOP\": 4,\r\n            \"WT\": 59.7,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD300.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 88,\r\n            \"AWBNO\": \"86216021872\",\r\n            \"\": \"47\",\r\n            \"SHIPPER\": \"CASH\",\r\n            \"SHIPPERADDRESS\": 0,\r\n            \"CONSIGNEE\": \"\",\r\n            \"BINVAT\": \"\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"\",\r\n            \"CTC\": \"\",\r\n            \"TELNO.\": \"\",\r\n            \"NOP\": 2,\r\n            \"WT\": 20.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES   YARN SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 89,\r\n            \"AWBNO\": \"86216136996\",\r\n            \"\": \"33\",\r\n            \"SHIPPER\": \"CHANGZHOU DREAMBLUE TEXTILE CO LTD\",\r\n            \"SHIPPERADDRESS\": \"DONGHUA PARK HUTANG WUJIN JIANGSU CHANGZHOU CHINA\",\r\n            \"CONSIGNEE\": \"POLO COMPOSITE KNIT INDUSTRY LTD\",\r\n            \"BINVAT\": \"0002769160403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"226 SINGAIR ROAD HEMAYETPUR SAVAR DHAKA\",\r\n            \"CTC\": \"MR ALAMGIR MS SAYA\",\r\n            \"TELNO.\": \"0248957981\",\r\n            \"NOP\": 1,\r\n            \"WT\": 11,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 90,\r\n            \"AWBNO\": \"86216021850\",\r\n            \"\": \"46\",\r\n            \"SHIPPER\": \"CASH\",\r\n            \"SHIPPERADDRESS\": 0,\r\n            \"CONSIGNEE\": \"\",\r\n            \"BINVAT\": \"\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"\",\r\n            \"CTC\": \"\",\r\n            \"TELNO.\": \"\",\r\n            \"NOP\": 2,\r\n            \"WT\": 24.1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES   ZIPPER SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 91,\r\n            \"AWBNO\": \"86216111155\",\r\n            \"\": \"58\",\r\n            \"SHIPPER\": \"TNG TEX\",\r\n            \"SHIPPERADDRESS\": \"NO 24 YUEDONG ROAD PAOJIANG SHAOXING ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"MONDOL INTIMATES LTD\",\r\n            \"BINVAT\": \"0002837240103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"SHIRIR CHALA BAGER BAZAR  GAZIPUR 1700  BANGLADESH\",\r\n            \"CTC\": \"MD YAMIN HOSSAIN\",\r\n            \"TELNO.\": \"8801955551150\",\r\n            \"NOP\": 1,\r\n            \"WT\": 19.4,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD20.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 92,\r\n            \"AWBNO\": \"86216021861\",\r\n            \"\": \"45\",\r\n            \"SHIPPER\": \"CASH\",\r\n            \"SHIPPERADDRESS\": 0,\r\n            \"CONSIGNEE\": \"\",\r\n            \"BINVAT\": \"\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"\",\r\n            \"CTC\": \"\",\r\n            \"TELNO.\": \"\",\r\n            \"NOP\": 1,\r\n            \"WT\": 24.1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES   PULL THE ROPE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 93,\r\n            \"AWBNO\": \"86216431711\",\r\n            \"\": \"40\",\r\n            \"SHIPPER\": \"JIANGSU PINYTEX TEXTILE DYEING  AND  FINISHING CO \",\r\n            \"SHIPPERADDRESS\": \"NO 165 SOUTH QINGYANG ROAD CHANGZH OU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"BEST SHIRTS LTD\",\r\n            \"BINVAT\": \"0002931380103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"35 KUNIA PO NATIONAL UNIVERSITY GAZIPUR1704  BANGLADESH\",\r\n            \"CTC\": \"MR KABIR\",\r\n            \"TELNO.\": \"01730 785255\",\r\n            \"NOP\": 1,\r\n            \"WT\": 13.3,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"100 COTTON  FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD5.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 94,\r\n            \"AWBNO\": \"86216470900\",\r\n            \"\": \"13\",\r\n            \"SHIPPER\": \"LUTHAI TEXTILE CO LTD \",\r\n            \"SHIPPERADDRESS\": \"NO 97 EAST SONGLING ROAD ZICHUAN   \",\r\n            \"CONSIGNEE\": \"REAZ EXPORT APPARELS LIMITED\",\r\n            \"BINVAT\": \"0004279510103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"NORTH KHAIKOIR SIGN BORD PO K B BAZAR  PO NATIONAL UNIVERSITY GAZIPUR 1704 BD \",\r\n            \"CTC\": \"MONTI\",\r\n            \"TELNO.\": \"8801674094455\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 95,\r\n            \"AWBNO\": \"86216470863\",\r\n            \"\": \"13\",\r\n            \"SHIPPER\": \"LUTHAI TEXTILE CO LTD \",\r\n            \"SHIPPERADDRESS\": \"NO 97 EAST SONGLING ROAD ZICHUAN   \",\r\n            \"CONSIGNEE\": \"ECOFAB LIMITED\",\r\n            \"BINVAT\": \"0003456160103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"HOLDING NO 228 1 JOGITALA BRRI GAZIPUR 1701 BD\",\r\n            \"CTC\": \"WAHID\",\r\n            \"TELNO.\": \"880292919137\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.1,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLES\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 96,\r\n            \"AWBNO\": \"86215644546\",\r\n            \"\": \"9\",\r\n            \"SHIPPER\": \"JIANGSU YUYIYANG  Y AND D FEDEX CO LTD \",\r\n            \"SHIPPERADDRESS\": \"268 WEST RENMIN ROAD NANTONG JIANGSU CHINA \",\r\n            \"CONSIGNEE\": \"VOYAGER APPARELS LTD\",\r\n            \"BINVAT\": \"0008582230103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"8 MALIBAG CHOWDHUR YPARA DHAKA 1219\",\r\n            \"CTC\": \"RATAN\",\r\n            \"TELNO.\": \"8809678771771\",\r\n            \"NOP\": 1,\r\n            \"WT\": 7.95,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD3.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 97,\r\n            \"AWBNO\": \"86216111181\",\r\n            \"\": \"61\",\r\n            \"SHIPPER\": \"SHAOXING JINER TEXTILES CO LTD\",\r\n            \"SHIPPERADDRESS\": \"YUEDONG ROAD PAOJIANG INDUSTRIAL SHAOXING CITY ZHEJIANG CHINA\",\r\n            \"CONSIGNEE\": \"BORIS TEXTILE CORPORATION LTD\",\r\n            \"BINVAT\": \"1016675231\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"33 CHA 1 ZOM ZOM TOWER SAMOLI HOUSING ROAD 6 SHEKERTEK ADABOR DHAKA 1207 BANGLADESH\",\r\n            \"CTC\": \"ZAKIR HOSSAIN\",\r\n            \"TELNO.\": \"01715160274\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.6,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC SAMPLE\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 98,\r\n            \"AWBNO\": \"86216461730\",\r\n            \"\": \"29\",\r\n            \"SHIPPER\": \"CHANGZHOU DONGHENG PRINTING AND DYEING CO LTD\",\r\n            \"SHIPPERADDRESS\": \"NO 8 JINGYANG ROAD CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"PANORAMA APPARELS LTD\",\r\n            \"BINVAT\": \"0002179260103\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"PO NATIONAL UNIVERSITY P S GAZIPUR SADAR DIST GAZIPUR\",\r\n            \"CTC\": \"MD SHAHID HASAN SWEET\",\r\n            \"TELNO.\": \"01916861086\",\r\n            \"NOP\": 1,\r\n            \"WT\": 5.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD12.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 99,\r\n            \"AWBNO\": \"86216460934\",\r\n            \"\": \"18\",\r\n            \"SHIPPER\": \"CHANGZHOU SHENGHONGJING TEXTILE\",\r\n            \"SHIPPERADDRESS\": \"FLOOR 2 BUILDING CHENGDONG INDUSTRIAL PARK HUTANG TOWN WUJIN DISTRICT CHANGZHOU JIANGSU CHINA\",\r\n            \"CONSIGNEE\": \"BEQ KNIT LTD\",\r\n            \"BINVAT\": \"0012879780403\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"42 TAYIBPUR PUKURPAR ASHULIA SAVAR DHAKA 1341\",\r\n            \"CTC\": \"MR SOHEL\",\r\n            \"TELNO.\": \"8801714866765\",\r\n            \"NOP\": 1,\r\n            \"WT\": 23.6,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD1.00\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        },\r\n        {\r\n            \"NO\": 100,\r\n            \"AWBNO\": \"86216453164\",\r\n            \"\": \"61\",\r\n            \"SHIPPER\": \"JOC \",\r\n            \"SHIPPERADDRESS\": \"NO 8 LIYUAN ROAD NANJING CHINA \",\r\n            \"CONSIGNEE\": \"IDENTITY TRADING BANGLADESH LTD\",\r\n            \"BINVAT\": \"0041518740201\",\r\n            \"DEST\": \"BANGLADESH\",\r\n            \"CNEEADDRESS\": \"LANE 6 HOUSE 366 1 LIFT 3 BARIDHARA DOHS\",\r\n            \"CTC\": \"ALKA\",\r\n            \"TELNO.\": \"880 1966903516\",\r\n            \"NOP\": 1,\r\n            \"WT\": 0.2,\r\n            \"VOL\": \"\",\r\n            \"DSCT\": \"FABRIC\",\r\n            \"COD\": \"\",\r\n            \"VAL\": \"USD0.20\",\r\n            \"RE\": \"\",\r\n            \"BAGNO\": \"\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/upload/register/mawb/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"upload",
+								"register",
+								"mawb",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bill Generate Status Change",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/upload/billGenerate/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"upload",
+								"billGenerate",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bill Generation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/upload/billGenerate/260",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"upload",
+								"billGenerate",
+								"260"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update uploadtable",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"awb\": 86216431641,\r\n    \"address\": \"1217 YUTTAN23 MANSION NO 2 2FUDONG RD HUTANG CHANGZHOU JIANGSU CHINA\",\r\n    \"bin_vat\": 5087980503,\r\n    \"bag_no\": \"\",\r\n    \"consigne\": \"KAY GARMENTS LTD..\",\r\n    \"cnee_address\": \"DIDAR MARKET 321 SIRAJUDDOULLAH ROAD DEWAN BAZAR CHITTAGONG  BANGLADESH\",\r\n    \"ctc\": \"MR SHAHID\",\r\n    \"cod\": null,\r\n    \"dest\": \"BANGLADESH\",\r\n    \"dsct\": \"STICKERS SAMPLE\",\r\n    \"nop\": 1,\r\n    \"re\": \"\",\r\n    \"tel_no\": null,\r\n    \"volume\": 0,\r\n    \"val\": 0.9,\r\n    \"weight\": 0,\r\n    \"name\": \"BMS IMP AND EXP CO LTD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/upload/254",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"upload",
+								"254"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Upload",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/upload/254",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"upload",
+								"254"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resources",
+			"item": [
+				{
+					"name": "Location Rate",
+					"item": [
+						{
+							"name": "register location",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"location_to\": \"CTG\",\r\n    \"location_from\":\"Guangzhou\",\r\n    \"weight_1\": 1,\r\n    \"rate_1\": 12.0,\r\n    \"weight_2\": 20,\r\n    \"rate_2\": 9.5,\r\n    \"weight_3\": 50,\r\n    \"rate_3\": 15.5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/location-rate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"location-rate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/location-rate/getAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"location-rate",
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getOne by From and To",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/location-rate/getOne?locationFrom=Guangzhou&locationTo=Dhaka",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"location-rate",
+										"getOne"
+									],
+									"query": [
+										{
+											"key": "locationFrom",
+											"value": "Guangzhou"
+										},
+										{
+											"key": "locationTo",
+											"value": "Dhaka"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "upload location rate",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rate_3\" : 6.5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/location-rate/updateLocationRate/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"location-rate",
+										"updateLocationRate",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/location-rate/getRate/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"location-rate",
+										"getRate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Converstion Rate",
+					"item": [
+						{
+							"name": "create Converstion Rate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bdt_value\": 101.50,\r\n    \"month\": 3,\r\n    \"year\": 2024\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/conversion-bdt",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"conversion-bdt"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one by month and year",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/conversion-bdt/getOne/3/2024",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"conversion-bdt",
+										"getOne",
+										"3",
+										"2024"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/conversion-bdt/getAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"conversion-bdt",
+										"getAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Conversion Rate",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bdt_value\": 200,\r\n    \"month\": 7,\r\n    \"year\": 2024\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/conversion-bdt/update-conversion-rate/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"conversion-bdt",
+										"update-conversion-rate",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Parcel",
+					"item": [
+						{
+							"name": "create Parcel",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"weight\":1,\r\n    \"rate1\":350,\r\n    \"rate2\":200,\r\n    \"location\":\"CTG\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/parcelrate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"parcelrate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get parcel",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "get one based on location and weight",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/parcelrate/getOne?location=Dhaka&weight=4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"parcelrate",
+										"getOne"
+									],
+									"query": [
+										{
+											"key": "location",
+											"value": "Dhaka"
+										},
+										{
+											"key": "weight",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Parcel",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "update Parcel Rate",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"weight\": 1,\r\n    \"rate1\": 200.50,\r\n    \"rate2\" : 150.75,\r\n\r\n    \"location\": \"CTG\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/parcelrate/update/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"parcelrate",
+										"update",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get parcel rate by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/parcelrate/getRate/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"parcelrate",
+										"getRate",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Paper Calculations",
+			"item": [
+				{
+					"name": "Create PCR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uploadID\": 1,\r\n    \"weight\": 50,\r\n    \"conversionMonth\": 5,\r\n    \"conversionYear\": 2024,\r\n    \"location\": \"China\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/papercalculation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"papercalculation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create PCS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uploadID\" : 280,\r\n    \"ChinaBasedUSD\": 300,\r\n    \"conversionMonth\": 7,\r\n    \"conversionYear\": 2024\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/papercalculation/pcs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"papercalculation",
+								"pcs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parcel Calculations",
+			"item": [
+				{
+					"name": "SCR",
+					"item": [
+						{
+							"name": "Create SCR",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"uploadID\": 254,\r\n    \"locationFrom\": \"Guangzhou\",\r\n    \"locationTo\": \"Dhaka\",\r\n    \"internal_location\": \"OTHERS\",\r\n    \"conversionMonth\": 3,\r\n    \"conversionYear\": 2024,\r\n    \"weight\": 15,\r\n    \"other_rate\": 25.50\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/parcelcalculations/scr",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"parcelcalculations",
+										"scr"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "SPX-PP",
+					"item": [
+						{
+							"name": "create SPX-PP",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"uploadID\": 260,\r\n    \"internal_location\": \"OTHERS\",\r\n\r\n    \"weight\": 15,\r\n    \"other_rate\": 25.50\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/parcelcalculations/spx-pp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"parcelcalculations",
+										"spx-pp"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create SCS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uploadID\": 289,\r\n    \"weight\": 40,\r\n    \"chinaBasedUSD\": 200,\r\n    \"conversionMonth\": 7,\r\n    \"conversionYear\": 2024,\r\n    \"internal_location\": \"Dhaka\",\r\n    \"other_rate\": 300\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/parcelcalculations/scs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"parcelcalculations",
+								"scs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
