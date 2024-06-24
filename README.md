@@ -22,9 +22,15 @@ npm install -g @prisma/cli
 ```
 
 5. Generate Prisma Client
+```bash
 npx prisma generate
+```
 
 6.1. Create Migration
+```bash
 npx prisma migrate dev --name initial_migration
+```
 6.2. Apply Migration
+```bash
 npx prisma migrate deploy
+```
