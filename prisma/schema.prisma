@@ -8,11 +8,12 @@ generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
-  provider = "mysql"
-  url      = "mysql://root@localhost:3306/mydb"
-}
 
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
 model Admin {
   adminid Int @default(autoincrement()) @id
   name String
